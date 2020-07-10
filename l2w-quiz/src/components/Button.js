@@ -1,9 +1,10 @@
 import React from "react";
 
-class Button extends React.Component {
-  render() {
-    return <h1>This is a button</h1>;
-  }
-}
-
+const Button = ({ onClick, children, id }) => {
+  return (
+    <button className="button" onClick={onClick} id={id}>
+      {children}
+    </button>
+  );
+};
 export default Button;
