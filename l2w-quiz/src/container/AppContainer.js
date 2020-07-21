@@ -4,28 +4,29 @@ import { connect } from "react-redux";
 import {
   setQuiz,
   setCategory,
+  resetQuiz,
   countCorrect,
   updateCurrent,
-  resetQuiz,
   currentQuestion,
 } from "../redux/actions/actions";
 
 const mapStateToProps = (state) => {
   return {
     quizData: state.quizData,
+    selectCategory: state.selectCategory,
     currentQuestion: state.currentQuestion,
     correctAnswers: state.correctAnswers,
-    selectCategory: state.selectCategory,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setQuizData: (quizData) => dispatch(setQuiz(quizData)),
+    setQuiz: (quizData) => dispatch(setQuiz(quizData)),
     setCategory: () => dispatch(setCategory()),
-    countCorrect: () => dispatch(countCorrect()),
-    updateCurrent: () => dispatch(updateCurrent(currentQuestion)),
     resetQuiz: () => dispatch(resetQuiz()),
+    countCorrect: () => dispatch(countCorrect()),
+    updateCurrent: (currentQuestion) =>
+      dispatch(updateCurrent(currentQuestion)),
   };
 };
 

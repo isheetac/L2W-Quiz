@@ -8,13 +8,13 @@ import {
 
 export const initialState = {
   quizData: null,
-  correctAnswers: 0,
   selectCategory: false,
+  correctAnswers: 0,
   currentQuestion: 0,
 };
 
 //Reducer
-export const appReducer = (state = initialState, action) => {
+export const updateState = (state = initialState, action) => {
   switch (action.type) {
     case "SET_QUIZ":
       return {
@@ -38,7 +38,6 @@ export const appReducer = (state = initialState, action) => {
       };
     case "RESET_QUIZ":
       return {
-        ...state,
         initialState,
       };
     default:

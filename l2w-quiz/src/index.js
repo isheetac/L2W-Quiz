@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "../src/styles.css";
-import AppContainer from "./container/AppContainer";
 import { store } from "./redux/store/index";
+import AppContainer from "./container/AppContainer";
 
 ReactDOM.render(
   <AppContainer store={store} />,

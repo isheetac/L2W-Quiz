@@ -30,7 +30,7 @@ class Timer extends React.Component {
   render() {
     const { duration } = this.props;
     let timeLeft = duration - this.state.seconds;
-    return <span>Time Left: {timeLeft}</span>;
+    return <span style={{ color: "red" }}>Time Left: {timeLeft}</span>;
   }
 }
 export default Timer;

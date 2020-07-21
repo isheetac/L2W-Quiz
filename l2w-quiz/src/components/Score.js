@@ -6,7 +6,7 @@ const Score = ({ refresh, score }) => {
     <article className="scoreCard">
       <h1>Your Score</h1>
       <p>{score}</p>
-      <Button onClick={refresh}>Play Again</Button>
+      <Button onClick={refresh}>Take Quiz Again</Button>
     </article>
   );
 };
